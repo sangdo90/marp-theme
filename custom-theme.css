@@ -31,36 +31,73 @@
    font-size: 40px;
    color: rgb(2, 66, 117)
  }
-
+ 
  h3 {
-  font-size: 35px;
-  color: rgb(0, 0, 0)
-}
+   font-size: 35px;
+   color: rgb(0, 0, 0)
+ }
+ 
+ ul {
+   list-style: none;
+   /* Remove default bullets */
+ }
+ 
+ ul li::before {
+   content: "-";
+   /* Add content: \2022 is the CSS Code/unicode for a bullet */
+   font-weight: bold;
+   /* If you want it to be bold */
+   display: inline-block;
+   /* Needed to add space between the bullet and the text */
+   width: 1em;
+   /* Also needed for space (tweak if needed) */
+   margin-left: -1em;
+   /* Also needed for space (tweak if needed) */
+ }
+ 
+ 
+ li {
+   font-size: 30px;
+   color: rgb(0, 0, 0)
+ }
+ 
+ li li {
+   font-size: 25px;
+   color: rgb(46, 46, 46)
+ }
  
  
  section.split {
    overflow: visible;
    display: grid;
    grid-template-columns: 600px 600px;
-   grid-template-rows: 100px auto;
-   grid-template-areas: 
-       "slideheading slideheading"
-       "leftpanel rightpanel";
+   grid-template-rows: 50px auto;
+   grid-template-areas:
+     "slideheading slideheading"
+     "leftpanel rightpanel";
  }
  
- section.split .ldiv { grid-area: leftpanel; }
- section.split .rdiv { grid-area: rightpanel; }
-
-
-  
+ section.split .ldiv {
+   grid-area: leftpanel;
+ }
+ 
+ section.split .rdiv {
+   grid-area: rightpanel;
+ }
+ 
  section.split2 {
-  overflow: visible;
-  display: grid;
-  grid-template-columns: 600px 600px;
-  grid-template-rows: 100px auto;
-  grid-template-areas: 
-      "leftpanel rightpanel";
-}
-
-section.split2 .ldiv { grid-area: leftpanel; }
-section.split2 .rdiv { grid-area: rightpanel; }
+   overflow: visible;
+   display: grid;
+   grid-template-columns: 600px 600px;
+   grid-template-rows: 10px;
+   grid-template-areas:
+     "leftpanel rightpanel";
+ }
+ 
+ section.split2 .ldiv {
+   grid-area: leftpanel;
+ }
+ 
+ section.split2 .rdiv {
+   grid-area: rightpanel;
+ }
