@@ -9,7 +9,7 @@
  @import 'gaia';
 
  section {
-   background: whitesmoke
+   background: rgb(254, 255, 246)
      /* background-color: black; */
  
  }
@@ -24,12 +24,18 @@
  
  h1 {
    font-size: 50px;
-   color: black
+   color: rgb(27, 25, 153)
  }
  
  h2 {
    font-size: 40px;
+   color: rgb(2, 66, 117)
  }
+
+ h3 {
+  font-size: 35px;
+  color: rgb(0, 0, 0)
+}
  
  
  section.split {
@@ -44,3 +50,17 @@
  
  section.split .ldiv { grid-area: leftpanel; }
  section.split .rdiv { grid-area: rightpanel; }
+
+
+  
+ section.split2 {
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 100px auto;
+  grid-template-areas: 
+      "leftpanel rightpanel";
+}
+
+section.split2 .ldiv { grid-area: leftpanel; }
+section.split2 .rdiv { grid-area: rightpanel; }
